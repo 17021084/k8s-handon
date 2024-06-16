@@ -9,7 +9,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  const hello= containerIP
+  const hello= "Version 2 " +containerIP
   console.log(`Container IP: ${containerIP}`);
   res.send(hello)
 })
