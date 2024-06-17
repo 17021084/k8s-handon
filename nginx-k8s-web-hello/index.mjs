@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 app.get("/nginx", async (req, res) => {
   const url = "http://nginx"; // name same in deployment metadata name
   const response = await fetch(url);
-  const text = response.text();
+  const text = await response.text();
   res.send(text);
 });
 
