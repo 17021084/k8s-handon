@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: # Deployment key name for resource use
-  name: server-react
+  name: my-react-app
 spec:
   selector: # which pods manged by this deployment
     matchLabels:
-      app: server-react
+      app: my-react-app
   replicas: 1
   template:
     metadata:
       labels:
-        app: server-react
+        app: my-react-app
     spec:
       containers:
-        - name: server-react
-          image: dotrunghg1999/server-react:1.0.0 
+        - name: my-react-app
+          image: dotrunghg1999/my-react-app
           resources:
             limits:
               memory: "128Mi"
               cpu: "250m"
           ports:
-            - containerPort: 4000
+            - containerPort: 3000

@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: k8s-web-hello
+  name: server-react
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
-    app: k8s-web-hello
+    app: server-react
   ports:
-  - port: 3030
-    targetPort: 3000
+  - port: 4000
+    targetPort: 4000
